@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Chai from './Chai'
+import Card1 from './components/Cards'
 
 function App() {
   let [counter, ashuCounter] = useState(13)
@@ -20,20 +21,17 @@ function App() {
     }
     ashuCounter(counter-1)
   }
+  let myObj = {
+    username: "hitesh",
+    age : 21
+  }
+  let newArry = [1,2,3]
 
   return (
-    <>
-    <section id="center">
-    <h1>yogendra</h1>
-    <h2>Counter value: {counter}</h2>
-    <button onClick={addValue}>Add value</button>
-    <br/>
-    <button onClick={removeValue}>remove value</button>
-      </section>
-
-      <div className="ticks"></div>
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+    <>  
+    <h1 className='bg-green-400 text-black p-4 rounded-xl mb-4'>Tailwind test</h1>
+    <Card1 username="Yogendra" btnText="Click me"/>
+    <Card1 username="ashu" btnText="Visit me"/>
     </>
   )
 }
